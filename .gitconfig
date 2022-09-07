@@ -1,1 +1,10 @@
-/home/bs/dotfiles/gitconfig
+[user]
+	email = bernhard.s.dev@gmail.com
+	name = Bernhard S
+[difftool]
+  prompt = true
+[diff]
+  tool = nvimdiff
+[difftool "nvimdiff"]
+  cmd = "nvim -d \"$REMOTE\" "\"$LOCAL\"
+
