@@ -83,6 +83,9 @@ alias bs='browser-sync start --server --files "*.js, *.html, *.css"'
 alias nk="normal_keyboard.sh"
 alias ck="coding_keyboard.sh"
 alias soff="xset dpms force off"
+#Netmaker/Wireguard
+alias wgup=" sudo netclient connect -n netmaker"
+alias wgdown=" sudo netclient disconnect -n netmaker"
 
 # some more ls aliases
 alias ls='ls --color=auto'
