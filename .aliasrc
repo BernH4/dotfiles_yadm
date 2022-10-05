@@ -84,8 +84,8 @@ alias nk="normal_keyboard.sh"
 alias ck="coding_keyboard.sh"
 alias soff="xset dpms force off"
 #Netmaker/Wireguard
-alias wgup=" sudo netclient connect -n netmaker"
-alias wgdown=" sudo netclient disconnect -n netmaker"
+alias wgup=" sudo netclient connect -n netmaker && sudo wg show"
+alias wgdown=" sudo netclient disconnect -n netmaker && sudo wg show"
 
 # some more ls aliases
 alias ls='ls --color=auto'
