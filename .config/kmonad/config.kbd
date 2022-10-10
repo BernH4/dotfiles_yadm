@@ -61,6 +61,7 @@ num (layer-toggle altgr_numbers)
 ;;convenience
 (defalias
 bm (tap-macro b e r n h a r d . s t e i d l 1 4 @@ g m a i l . c o m)
+nt (cmd-button "firefox -new-tab 'file:///home/bs/snap/firefox/common/.mozilla/firefox/zywro4gx.default-release/PROFILE/Prismatic-Night/firefox/startpage/index.html'")   ;; Append date to tmpfile
 )
 
 (defsrc
@@ -82,7 +83,7 @@ bm (tap-macro b e r n h a r d . s t e i d l 1 4 @@ g m a i l . c o m)
 (deflayer altgr_numbers
   _     _    @^2  @^3  _    _    _    @{   @[   @]   @}   @\\  _    _
   _     @@   _    @€   _    _    _    7    8    9    _    _    @~   _
-  _     _    _    _    0    _    _    4    5    6    0    _    _
+  _     _    _    @nt  0    _    _    4    5    6    0    _    _
   _     @|   _    _    _    _    @bm   1    1    2    3    _    _
   _     _    _              _              _    _    _    _
 )
