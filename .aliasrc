@@ -65,6 +65,7 @@ alias sm="platformio device monitor"
 # Convenience
 # alias pb="pastebinit -b paste.debian.net"
 alias u="sudo apt update && sudo apt upgrade"
+alias i="sudo apt install"
 alias o="xdg-open"
 alias ix="curl -F 'f:1=<-' ix.io"
 alias ipscan="nmap -sn 192.168.178.0/24"
@@ -87,6 +88,13 @@ alias soff="xset dpms force off"
 #Netmaker/Wireguard
 alias wgup=" sudo netclient connect -n netmaker && sudo wg show"
 alias wgdown=" sudo netclient disconnect -n netmaker && sudo wg show"
+
+
+#Uni
+alias cdti="cd ~/Documents/HM/sem1/ti_walentowitz/"
+alias cdse="cd ~/Documents/HM/sem1/se1_boettcher/"
+alias cdan="cd ~/Documents/HM/sem1/analysis_hoegele"
+
 
 # some more ls aliases
 alias ls='ls --color=auto'
