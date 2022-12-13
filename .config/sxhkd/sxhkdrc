@@ -7,8 +7,8 @@ super + Return
 # Application launcher
 # (removed exec from searched desktop entry fields)
 super + d
-  rofi -show drun -show-icons \
-  -drun-match-fields name,generic,categories,keywords
+  rofi -modi drun -show drun -show-icons \
+  -drun-match-fields name,generic,categories
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -59,8 +59,8 @@ super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
-# super + {p,b,comma,period}
-# 	bspc node -f @{parent,brother,first,second}
+super + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
 super + {_,shift + }c
@@ -122,13 +122,13 @@ super + {Left,Down,Up,Right}
 
 ## Media keys
 XF86AudioRaiseVolume
-	amixer -q set Master 5%+
+  amixer -q -D pulse sset Master 5%+
 
 XF86AudioLowerVolume
-	amixer -q set Master 5%-
+  amixer -q -D pulse sset Master 5%-
 
 XF86AudioMute
-	amixer -q set Master toggle
+	amixer -q -D pulse sset Master toggle
 
 XF86MonBrightnessDown
 	sudo $HOME/scripts/adj_brightness down
@@ -147,6 +147,7 @@ ctrl + alt + s
 ctrl + alt + f
 	mosquitto_pub -t sxhkd/shellyplug-s-fernseher/0/command  -m toggle
 
+
 #
 # rofi
 #
@@ -161,8 +162,8 @@ super + shift + f
 
 
 # Screenshots
-super + p
+Print
     maim ~/Pictures/$(date +%Y-%m-%d_%H-%m-%s).jpg
 
-super + ctrl + p
+super + Print
     maim -s ~/Pictures/$(date +%Y-%m-%d_%H-%m-%s).jpg

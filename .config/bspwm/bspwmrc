@@ -2,7 +2,6 @@
 
 ## Environtment
 export PATH="${PATH}:$HOME/.config/bspwm/bin"
-setxkbmap -option caps:escape &
 
 ## Get colors from .Xresources -------------------------------#
 xrdb ~/.Xresources
@@ -99,10 +98,10 @@ killall -9 sxhkd #xsettingsd dunst xfce4-power-manager
 #-cb "$BACKGROUND" -cf "$RED" -cfr "$RED" &
 
 # Lauch xsettingsd daemon
-#xsettingsd &
+#xsettingsd 
 
 # Lauch keybindings daemon
-sxhkd -c ~/.config/sxhkd/sxhkdrc_$HOSTNAME &
+sxhkd -c ~/.config/sxhkd/sxhkdrc &
 
 # Enable Super Keys For Menu
 # ksuperkey -e 'Super_L=Alt_L|F1' &
@@ -121,12 +120,12 @@ bash $HOME/.fehbg
 #exec mpd &
 
 # Start bspwm scripts
-# bspcolors
+# bspcolors # not sure what that does, I think dont miss it for now
 bspcomp
 bspbar
 bspfloat &
 # /home/bs/scripts/clipboard_rm_dollar/rm_dollar.sh &
-firefox &
+#firefox &
 
 ## Adjust backlight (AMD)
 #blight -d amdgpu_bl0 set 15%

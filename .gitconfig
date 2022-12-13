@@ -1,6 +1,6 @@
 [user]
 	email = bernhard.s.dev@gmail.com
-	name = Bernhard S
+	name = Bernhard Steidl
 [difftool]
   prompt = true
 [diff]
@@ -8,3 +8,5 @@
 [difftool "nvimdiff"]
   cmd = "nvim -d \"$REMOTE\" "\"$LOCAL\"
 
+[includeIf "gitdir:~/Documents/HM/"]
+	path = ~/Documents/HM/.gitconfig

@@ -129,3 +129,6 @@ setxkbmap -option caps:escape
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+. /usr/share/autojump/autojump.sh
+

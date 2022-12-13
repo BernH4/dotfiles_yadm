@@ -45,6 +45,7 @@
 
 (defalias
 num (layer-toggle altgr_numbers)
+sft (layer-toggle shifted)
 @ RA-q
 € RA-e
 | RA-lsgt ;;the < key next to shift (less/greater than)
@@ -52,6 +53,8 @@ num (layer-toggle altgr_numbers)
 { RA-7
 [ RA-8
 ] RA-9
+lb *
+rb \(
 } RA-0
 \\ RA--
 ^2 RA-2
@@ -74,25 +77,48 @@ nt (cmd-button "firefox -new-tab 'file:///home/bs/snap/firefox/common/.mozilla/f
 
 (deflayer standard
   _     _    _    _    _    _    _    _    _    _    _    _    _    _
-  _     _    _    _    _    _    _    _    _    _    _    _    _    _
-  esc   _    _    _    _    _    _    _    _    _    _    _    _
-  _     _    _    _    _    _    _    _    _    _    _    _    _
+  _     _    _    _    _    _    _    _    _    _    _    @{   _    _
+  esc   _    _    _    _    _    _    _    _    _    @lb  @[   _
+  @sft  _    _    _    _    _    _    _    _    _    _    _    _
   _     _    _              _              @num _    _    _
 )
 
 (deflayer altgr_numbers
   _     _    @^2  @^3  _    _    _    @{   @[   @]   @}   @\\  _    _
-  _     @@   _    @€   _    _    _    7    8    9    _    _    @~   _
-  _     _    _    @nt  0    _    _    4    5    6    0    _    _
-  _     @|   _    _    _    _    @bm   1    1    2    3    _    _
+  _     @@   _    @€   _    _    _    7    8    9    _    @ü   @~   _
+  _     _    _    @nt  0    _    _    4    5    6    @ö   @ä   _
+  _     @|   _    _    _    _    @bm   1    1    2    3    _   _
   _     _    _              _              _    _    _    _
 )
 
-;;(defalias
-;;  ;; aliases for German QWERTZ
-;;  ä '
-;;  ö ;
-;;  ü [
+
+(deflayer shifted
+  XX   @!   S-2  @§   @$   @%   @&   @/   @lb  @rb  @=   @?   _     _
+  _     Q    W    E    R    T    Y    U    I    O    P   @}   @*    _
+  _     A    S    D    F    G    H    J    K    L    @rb @]   @'
+  _    @>    Z    X    C    V    B    N    M    @;   @:  @\_  _
+  _     _    _              _              _    _    _    _
+)
+(defalias
+  ;; aliases for German QWERTZ
+  ä '
+  ö ;
+  ü [
+  ; S-,
+  : S-.
+  \_ S-/
+  ' S-\
+  * S-]
+  ? S--
+  = S-0
+  / S-7
+  § S-3
+  ! S-1
+  $ S-4
+  % S-5
+  & S-6
+  > S-102d
+)
 ;;  ß -
 ;;  y z
 ;;  z y

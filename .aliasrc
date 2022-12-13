@@ -89,6 +89,9 @@ alias soff="xset dpms force off"
 alias wgup=" sudo netclient connect -n netmaker && sudo wg show"
 alias wgdown=" sudo netclient disconnect -n netmaker && sudo wg show"
 
+#find
+alias fd="fd -L" #follow symbolic links
+
 
 #Uni
 alias cdti="cd ~/Documents/HM/sem1/ti_walentowitz/"
